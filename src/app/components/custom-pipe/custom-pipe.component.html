@@ -1,0 +1,16 @@
+<div>
+    <h3 class="bg-info text-center text-white p-3 mt-2">Custon Pipe</h3>
+    <p class="alert alert-success">
+        {{title|summary:100}}
+    </p>
+</div>
+
+<div class="col-md-4 mb-2" *ngFor="let file of fileArr">
+    <div class="card">
+        <div class="card-header alert alert-danger"> {{file.filename}}
+        </div>
+        <div class="card-body">
+            <span [innerHTML]="file.type" class="m-1 bg-warning p-3"></span> {{file.size|file}}
+        </div>
+    </div>
+</div>
